@@ -29,4 +29,4 @@ Just open `index.html` in your browser and start playing!
 
 ---
 
-*Built for a startup MVP demo. For questions or improvements, feel free to reach out!*
+*For questions or improvements, feel free to reach out!*
