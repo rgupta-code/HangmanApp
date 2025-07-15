@@ -1,0 +1,128 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0ecff 0%, #b3cfff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+}
+
+#app {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(100, 149, 237, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+h1 {
+  text-align: center;
+  color: #3a7bd5;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  text-shadow: 0 2px 8px rgba(58,123,213,0.08);
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.letter {
+  font-size: 2rem;
+  border-bottom: 2px solid #3a7bd5;
+  width: 2rem;
+  text-align: center;
+  color: #3a7bd5;
+  background: rgba(230,240,255,0.7);
+  border-radius: 4px;
+  transition: color 0.3s, background 0.3s;
+}
+
+.letter.revealed {
+  color: #1e3c72;
+  background: #eaf1ff;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.key {
+  background: linear-gradient(135deg, #e0ecff 0%, #3a7bd5 100%);
+  border: none;
+  border-radius: 8px;
+  color: #1e3c72;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(58,123,213,0.08);
+}
+
+.key:disabled {
+  background: #e0e7ef;
+  color: #b0b8c9;
+  cursor: not-allowed;
+}
+
+.status {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #3a7bd5;
+  margin-bottom: 1rem;
+  min-height: 1.5rem;
+  transition: color 0.3s;
+}
+
+.hangman-figure {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+button.restart {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #3a7bd5 0%, #6dd5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button.restart:hover {
+  background: linear-gradient(135deg, #6dd5fa 0%, #3a7bd5 100%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+  #app {
+    padding: 1.2rem 0.5rem;
+    min-width: unset;
+    max-width: 98vw;
+  }
+  .keyboard {
+    gap: 0.3rem;
+  }
+  .key {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.95rem;
+  }
+} 
